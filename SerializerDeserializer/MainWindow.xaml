@@ -1,0 +1,54 @@
+﻿<Window x:Class="SerializerDeserializer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SerializerDeserializer"
+        mc:Ignorable="d"
+        Title="Folder Serializer/Deserializer" Height="268.334" Width="543.667" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <GroupBox x:Name="groupBoxSerealization" Header="Serialize" HorizontalAlignment="Left" Margin="6,6,0,0" VerticalAlignment="Top" Height="88" Width="514">
+            <Grid>
+                <Label x:Name="label" Content="Input folder:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,6,0,0"/>
+                <TextBlock x:Name="textBlockSelectedFolder" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Margin="109,10,0,0" Width="206"/>
+                <Button x:Name="buttonSelectInputFolder" Content="Select folder" HorizontalAlignment="Left" Margin="326,9,0,0" VerticalAlignment="Top" Width="75" Click="buttonSelectInputFolder_Click" ToolTip="Select input folder for serialization"/>
+                <Button x:Name="buttonSerialize" Content="Serialize" HorizontalAlignment="Left" Margin="418,19,0,0" VerticalAlignment="Top" Width="76" Click="buttonSerialize_Click" Height="26" FontSize="14"/>
+                <Label x:Name="label3" Content="Save file path:" HorizontalAlignment="Left" Margin="0,32,0,0" VerticalAlignment="Top" Width="87"/>
+                <TextBlock x:Name="textBlockFileName" HorizontalAlignment="Left" Margin="109,37,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="206"/>
+                <Button x:Name="buttonSaveFilePath" Content="Select file" HorizontalAlignment="Left" Margin="326,35,0,0" VerticalAlignment="Top" Width="75" Click="buttonSaveFilePath_Click" ToolTip="Save serealized .dat file" />
+                <Separator HorizontalAlignment="Left" Height="18" Margin="392,24,0,0" VerticalAlignment="Top" Width="47" RenderTransformOrigin="1.016,0.885">
+                    <Separator.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90"/>
+                            <TranslateTransform X="-21.827" Y="-31.837"/>
+                        </TransformGroup>
+                    </Separator.RenderTransform>
+                </Separator>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxDeserealization" Header="Deserialize" HorizontalAlignment="Left" Margin="6,99,0,0" VerticalAlignment="Top" Width="514" Height="92">
+            <Grid>
+                <Label x:Name="label1" Content="Output File:" HorizontalAlignment="Left" Margin="0,7,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockInputFile" HorizontalAlignment="Left" Margin="108,13,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="206" />
+                <Button x:Name="buttonOpenFile" Content="Open file" HorizontalAlignment="Left" Margin="324,13,0,0" VerticalAlignment="Top" Width="75" Click="buttonOpenFile_Click" ToolTip="Open file"/>
+                <Label x:Name="label2" Content="Folder for extract:" HorizontalAlignment="Left" Margin="0,38,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlockOutputFolder" HorizontalAlignment="Left" Margin="108,44,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="206"/>
+                <Button x:Name="SelectOutputFolder" Content="Select folder" HorizontalAlignment="Left" Margin="325,42,0,0" VerticalAlignment="Top" Width="74" Click="SelectOutputFolder_Click" ToolTip="Select output folder for deserialize" />
+                <Button x:Name="buttonDeserialize" Content="Deserialize" HorizontalAlignment="Left" Margin="417,25,0,0" VerticalAlignment="Top" Width="75" Height="26" FontSize="14" Click="buttonDeserialize_Click"/>
+                <Separator HorizontalAlignment="Left" Height="18" Margin="388,28,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="1.016,0.885">
+                    <Separator.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90"/>
+                            <TranslateTransform X="-21.827" Y="-31.837"/>
+                        </TransformGroup>
+                    </Separator.RenderTransform>
+                </Separator>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="buttonClose" Content="Close" HorizontalAlignment="Left" Margin="445,196,0,0" VerticalAlignment="Top" Width="75" Click="buttonClose_Click" ToolTip="Close application"/>
+    </Grid>
+</Window>
